@@ -1,0 +1,15 @@
+Exercício 1: O HTML é uma linguagem de marcação utilizada para criação de sites e sistemas web. Sabendo disso, descreva brevemente sua história, destacando seu criador, o contexto da criação.
+
+R: O HTML é uma linguagem de estruturação de páginas (marcação), sua história teve início quando Tim Berners-Lee (TBL), que trabalhava na CERN, decidiu que melhorar a disseminação de informações pela internet com seus amigos pesquisadores. Desde então o HTML é a linguagem base de toda WEB.
+
+#############################################
+
+Exercício 2: Após a difusão da internet, várias empresas batalharam em busca de liderar o mercado dos navegadores. Este período ficou conhecido como a guerra dos browsers. Sabendo disso, disserte sobre esse período destacando os navegadores mais populares de cada período.
+
+R: A guerra dos browsers começa quando o primeiro navegador gráfico do mundo foi lançado, o Mosaic. Desde então inumeros outros navegadores surgiram e desapareceram. Mas antes de tudo o naveador mais utilizado na década de era o Netscape, depois surgiram outros como o internet explorer, que era integrado com o Windows e era muito popular por ser integrado com o sistema proprietario da Microsoft, surgiu o Firefox que foi o sucessor do Netscape, que teve seu código fonte aberto se tornando o Firefox. Depois surgiu o Google Chrome, que é o navegador mais utilizado no momento por justamente ser integrado aos serviços Google, como o Android que é o sistema operacional movel mais usado do mundo!
+
+#############################################
+
+Exercício 3: Crie um documento HTML na versão 5, que contenha no título o seu nome, duas seções três parágrafos em cada seção.
+
+R: atividade 03.html
