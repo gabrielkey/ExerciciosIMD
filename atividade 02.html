@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 02 - João Gabriel Silva de Souza</title>
+</head>
+<body>
+    <label for="senha">Senha: </label><input type="password" id="senha"><br />
+    <button type="button" onclick="checarSenha();">Verificar</button>
+    <script>
+        function checarSenha(){
+        let senhaOculta = "teste";
+        let senha = document.getElementById('senha').value;
+
+        (senhaOculta == senha) ? alert("TRUE") : alert("FALSE");
+        }
+
+    </script>
+</body>
+</html>

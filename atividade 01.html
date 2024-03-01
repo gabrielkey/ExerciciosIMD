@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 01 - João Gabriel Silva de Souza</title>
+</head>
+<body>
+    <label for="texto1">Texto 01: </label><input type="text" id="texto1" /><br />
+    <label for="texto2">Texto 02: </label><input type="text" id="texto2" /><br />
+    <button type="button" onclick="concatenar();">Concatenar um texto</button>
+
+    <p id="resultado"></p>
+    <script>
+        const texto1 = document.getElementById('texto1').value;
+        const texto2 = document.getElementById('texto2').value;
+
+        const resultado = document.getElementById('resultado').innerHTML = texto1 + " " + texto2;
+    </script>
+</body>
+</html>
