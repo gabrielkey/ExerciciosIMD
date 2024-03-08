@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programação Estruturada Aula 03 - Exercicio 1</title>
+</head>
+<body>
+    <input type="number" id="x" />
+    <input type="number" id="y" />
+    <button type="button" onclick="calcular();">Calcular</button>
+
+    <p id="resultado"></p>
+    <script>
+        function calcular(){
+            let x = Number(document.getElementById("x").value);
+            let y = Number(document.getElementById("y").value);
+
+            let resultado = (x ** 2 + y ** 2) ** (1 / 2);
+
+            document.getElementById("resultado").innerHTML = resultado;
+        }
+    </script>
+</body>
+</html>

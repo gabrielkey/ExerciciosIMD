@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programação Estruturada Aula 04 - Exercicio 2</title>
+</head>
+<body>
+    <input type="number" id="x" placeholder="pés"/> <br />
+    <button type="button" onclick="resultado();">Calcular</button>
+
+    <script>
+        function Quilometro(x) {
+            return x * 0.000305;
+        }
+
+        function Metros(x) {
+            return x * 0.3048;
+        }
+
+        function resultado() {
+            let input = Number(document.getElementById("numero").value);
+            let metros = Metros(floca);
+            let Quilômetro = Quilometros(floca);
+
+            document.getElementById("orca").innerHTML = `${input} pés = ${metros} metros <br> ${floca} pés = ${Quilômetro} quilômetros`;
+        }
+
+    </script>
+</body>
+</html>
