@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade de listas </title>
+    <style>
+        .desordenada {
+            background-color: blueviolet;
+
+            li {
+                list-style-type: square;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 20px;
+            }
+
+        }
+
+        .ordenada {
+            .aninhadadentrodadesordenada li {
+                background-color: aquamarine;
+            }
+        }
+    </style>
+</head>
+<section id="Lista 01">
+    <h1>Tecnologias</h1>
+    <ul class="desordenada">
+        <li>JavaScript</li>
+        <li>HTML</li>
+        <li>CSS</li>
+    </ul>
+</section>
+<section id="Lista 02">
+    <h1>Tarefas</h1>
+    <ol class="ordenada">
+        <li>Estudar inglês</li>
+        <ol type="a" class="aninhadadentrodadesordenada">
+            <li>Fazer a lição de IV</li>
+            <li>Aula de conversão</li>
+            <li>Escrever redação</li>
+        </ol>
+        <li>Colocar comida para o cachorro</li>
+        <li>comprar caderno</li>
+    </ol>
+</section>
+
+<body>
+
+</body>
+
+</html>
