@@ -1,0 +1,40 @@
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Programação Estruturada</title>
+</head>
+
+<body>
+    <h1>Entrada do Programa</h1>
+    N1: <input type="number" id="a" value=""><br />
+    N2: <input type="number" id="b" value=""><br />
+    N3: <input type="number" id="c" value=""><br />
+    N4: <input type="number" id="d" value=""><br />
+    <button onclick="resultado('a', 'b', 'c', 'd', 'resultado')">OK</button>
+    <p id="resultado"></p>
+    <script>
+        function menorNumero(a, b, c, d) {
+            return Math.min(a, b, c, d)
+        }
+
+        function maiorNumero(a, b, c, d) {
+            return Math.max(a, b, c, d)
+        }
+
+        function resultado(a, b, c, d, resultado) {
+            var n1 = Number(document.getElementById(a).value);
+            var n2 = Number(document.getElementById(b).value);
+            var n3 = Number(document.getElementById(c).value);
+            var n4 = Number(document.getElementById(d).value);
+
+            var campo = document.getElementById(resultado);
+            var r1 = menorNumero(n1, n2, n3, n4);
+            var r2 = maiorNumero(n1, n2, n3, n4);
+
+            campo.innerHTML = `menor número: ${r1}<br />maior número: ${r2}`;
+        }
+    </script>
+</body>
+
+</html>
