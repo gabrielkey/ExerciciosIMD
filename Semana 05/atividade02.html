@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programação Estruturada</title>
+</head>
+
+<body>
+    <section>
+        <p id="resultado">Clique no botão para visualizar a Data!</p>
+        <button onclick="resultado('resultado');">Atualizar Data</button>
+    </section>
+    <script>
+
+        function resultado(saida) {
+            let dataAtual = dataFormatada();
+            let campo = document.getElementById(saida);
+
+            campo.innerHTML = dataAtual;
+        }
+
+        function dataFormatada() {
+            let dataAtual = new Date().toString();
+            let vetorDeDatas = dataAtual.split(' ');
+            let vetorDeHoras = vetorDeDatas[4].split(':');
+
+            let dia = vetorDeDatas[2];
+            let mes = vetorDeDatas[1];
+            let ano = vetorDeDatas[3];
+            let hora = vetorDeHoras[0]
+            let minutos = vetorDeHoras[1];
+
+            return `Data: ${dia} de ${mes} de ${ano}<br />Hora: ${hora}h${minutos}`;
+        }
+    </script>
+</body>
+
+</html>

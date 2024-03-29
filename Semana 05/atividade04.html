@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programação Estruturada</title>
+</head>
+
+<body>
+    <section>
+        <label for="nomeUsuario">Digite seu nome: </label>
+        <input type="text" id="nomeUsuario" />
+        <br />
+        <p id="resultado"></p>
+        <button onclick="resultado('nomeUsuario', 'resultado');">Exibir mensagem</button>
+    </section>
+    <script>
+        function resultado(input, saida) {
+            let campo = document.getElementById(saida);
+            let nome = document.getElementById(input).value;
+
+            const texto = "Olá {USUARIO}, seja bem-vindo(a) ao Instituto Metrópole Digital.";
+
+            let resultado = texto.replace("{USUARIO}", nome)
+
+            campo.innerHTML = resultado;
+        }
+
+    </script>
+</body>
+
+</html>

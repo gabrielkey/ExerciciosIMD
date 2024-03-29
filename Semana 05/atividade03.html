@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programação Estruturada</title>
+</head>
+
+<body>
+    <section>
+        <h1>Verifique sua idade</h1>
+        <p>Coloque sua idade no padrão 'DIA/MÊS/ANO' Ex: 21/08/2006</p>
+
+        <input type="text" id="idadeInput" placeholder="Exemplo: 17/08/2006" />
+        <br />
+        <p id="resultado"></p>
+        <button onclick="resultado('idadeInput', 'resultado');">Verificar idade</button>
+    </section>
+    <script>
+        function resultado(input, saida) {
+            let campo = document.getElementById(saida);
+            let dados = document.getElementById(input).value.split('/');
+
+            let resultado = verificarIdade(dados)
+
+            campo.innerHTML = `Você tem algo em torno de ${resultado} anos de idade.`;
+        }
+        function verificarIdade(idade) {
+            let dataAtual = new Date();
+
+            let mesAtual = dataAtual.getMonth();
+            let anoAtual = dataAtual.getFullYear();
+            let diaAtual = dataAtual.getDate();
+
+            // let mesIdade = parseInt(idade[1].replace('0', ''));
+            // let anoIdade = parseInt(idade[2]);
+            // let diaIdade = parseInt(idade[0])
+
+
+            // let calculoDaIdade = anoAtual - anoIdade;
+            // console.log(`${mesAtual < mesIdade} ${mesAtual} ${mesIdade}`)
+            // if (mesAtual < mesIdade ) {
+            //     return --calculoDaIdade;
+            // }
+
+            return calculoDaIdade;
+
+        }
+    </script>
+</body>
+
+</html>
