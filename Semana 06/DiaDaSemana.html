@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<section>
+    <p id="resultado"></p>
+    <label for="data">Data: </label><input type="date" id="data">
+    <button onclick="main('data', 'resultado');">Executar ação</button>
+</section>
+
+<body>
+    <script>
+
+        function main(data, campo) {
+            let saida = document.getElementById(campo);
+            let input = document.getElementById(data).value;
+            let vetor = input.split('-');
+            let dataFormatada = `${vetor[1]}/${(Number(vetor[2]) + 1).toString()}/${vetor[0]}`; // MM/DD/YYYY
+
+            let resultado = obterDiaDaSemana(dataFormatada);
+
+            saida.innerHTML = `${resultado}`;
+        }
+
+        function obterDiaDaSemana(dataTexto) {
+            var data = new Date(dataTexto);
+
+            var diaDaSemana = data.getDay();
+
+            switch (diaDaSemana) {
+                case 0:
+                    return 'Domingo';
+                case 1:
+                    return 'Segunda-feira';
+                case 2:
+                    return 'Terça-feira';
+                case 3:
+                    return 'Quarta-feira';
+                case 4:
+                    return 'Quinta-feira';
+                case 5:
+                    return 'Sexta-feira';
+                case 6:
+                    return 'Sábado';
+                default:
+                    return 'Data inválida';
+            }
+        }
+
+    </script>
+</body>

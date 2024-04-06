@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Produtos</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        form {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        select,
+        option {
+            width: 100%;
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+
+        button {
+            width: 20%;
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+
+        <form id="formulario" action="https://frontendaula07.onrender.com/" method="GET">
+            <h1>Cadastro de produtos</h1>
+            <hr />
+            <label for="sku">SKU:</label>
+            <input type="text" id="sku" name="sku">
+
+            <label for="produto">Produto:</label>
+            <input type="text" id="produto" name="produto">
+
+            <label for="peso">Peso (em números):</label>
+            <input type="number" id="peso" name="peso">
+
+            <label for="unidade">Unidade:</label>
+            <select id="unidade" name="unidade">
+                <option value="quilograma">quilograma (kg)</option>
+                <option value="grama">grama (g)</option>
+                <option value="tonelada">tonelada (t)</option>
+            </select>
+
+            <label for="largura">Largura (em números):</label>
+            <input type="number" id="largura" name="largura">
+
+            <label for="altura">Altura (em números):</label>
+            <input type="number" id="altura" name="altura">
+
+            <label for="profundidade">Profundidade (em números):</label>
+            <input type="number" id="profundidade" name="profundidade">
+
+            <button type="submit">Enviar</button>
+            <button type="reset">Limpar</button>
+        </form>
+
+    </section>
+</body>
+
+</html>

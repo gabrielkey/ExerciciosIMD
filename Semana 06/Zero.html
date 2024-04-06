@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<section>
+    <p id="resultado"></p>
+    <label for="X">X: </label><input type="number" id="x">
+    <button onclick="main('x', 'resultado');">Executar ação</button>
+</section>
+
+<body>
+    <script>
+
+        function main(x, campo) {
+            let saida = document.getElementById(campo);
+            let valor = parseInt(document.getElementById(x).value);
+            let resultado = maiorOuMenor(valor);
+
+            saida.innerHTML = `${resultado}`;
+        }
+        function maiorOuMenor(valor) {
+            return (valor == 0) ? "o valor de X é zero" : (valor > 0) ? `O número X é maior que zero` : `O número X é menor que zero`;
+        }
+    </script>
+</body>

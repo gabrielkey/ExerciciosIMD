@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="caracteres">Caracteres: </label>
+    <input type="text" id="caracteres">
+    <button onclick="main('caracteres', 'resultado');">Enviar ação</button>
+    <p id="resultado"></p>
+    <script>
+        function main(input, output) {
+            let entrada = document.getElementById(input).value;
+            let saida = document.getElementById(output);
+
+            let resultado = contarVogais(entrada);
+
+            saida.innerHTML = resultado;
+
+        }
+
+        function contarVogais(t) {
+            let texto = t.toLowerCase();
+            let vogais = 0;
+            let consoantes = 0;
+
+            const vogaisArray = ['a', 'e', 'i', 'o', 'u'];
+
+            for (let caractere of texto) {
+                if (caractere >= 'a' && caractere <= 'z') {
+                    (vogaisArray.includes(caractere)) ? vogais++ : consoantes++;
+                }
+            }
+
+            return `O texto ${texto} contém ${vogais} vogais e ${consoantes} consoantes.`;
+        }
+    </script>
+</body>
+
+</html>
