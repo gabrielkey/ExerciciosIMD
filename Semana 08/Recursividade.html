@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Programação Estruturada</title>
+</head>
+
+<body>
+    <h1>Entrada do Programa</h1>
+    <button onclick='exibir("resultado")'>OK</button>
+    <p id="resultado"></p>
+    <script>
+        function exibir(r) {
+            var valorInicial = Number(prompt("Informe um número: "));
+            var resultado = funcaomagica(valorInicial);
+
+            document.getElementById(r).innerHTML = `${resultado}`;
+        }
+
+        function funcaomagica(x) {
+            let resultado = "";
+
+            if (x < 0) {
+                resultado = "ERRO";
+                // CASO BASE
+            } else if (x != 0) {
+                var x = Number(prompt("Informe um número: "));
+                resultado += `${x} <br /> ${funcaomagica(x)}`;
+            }
+            return resultado;
+        }
+
+    </script>
+</body>
+
+</html>
