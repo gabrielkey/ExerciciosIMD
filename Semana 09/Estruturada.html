@@ -1,0 +1,37 @@
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Programação Estruturada</title>
+</head>
+
+<body>
+
+    <section>
+        <h1>Resultado:</h1>
+        <p id="resultado">Clique em "Executar" para visualizar o programa.</p>
+        <button onclick="executar('resultado')">Executar</button>
+    </section>
+
+    <script>
+
+        const executar = function (out) {
+            let campo = document.getElementById(out);
+            let vetor = [];
+            receberNumeros(vetor);
+
+            campo.innerHTML = vetor.join(", ");
+        }
+
+        const receberNumeros = function (vetor) {
+            let n = prompt("Informe um número (0 para sair):");
+
+            if (n != 0) {
+                vetor.unshift(n);
+                receberNumeros(vetor);
+            }
+        }
+    </script>
+</body>
+
+</html>
